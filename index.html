@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles.css">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -35,12 +36,22 @@
             }
         }
     </script>
+    <script>
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
 </head>
 
-<body class="font-sans antialiased text-church-violet bg-church-cream">
+<body class="font-sans antialiased text-church-violet dark:text-gray-100 bg-church-cream dark:bg-slate-900">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm"
+        id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
@@ -55,20 +66,50 @@
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#home"
-                        class="text-slate-600 hover:text-church-purple font-medium transition-colors">Home</a>
+                        class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Home</a>
                     <a href="#mass-schedule"
-                        class="text-slate-600 hover:text-church-purple font-medium transition-colors">Mass Schedule</a>
+                        class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Mass
+                        Schedule</a>
                     <a href="#about"
-                        class="text-slate-600 hover:text-church-purple font-medium transition-colors">About</a>
+                        class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">About</a>
                     <a href="#gallery"
-                        class="text-slate-600 hover:text-church-purple font-medium transition-colors">Gallery</a>
+                        class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Gallery</a>
                     <a href="#contact"
                         class="px-5 py-2.5 bg-church-gold text-church-violet rounded-full font-bold hover:bg-yellow-400 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact
                         Us</a>
+
+                    <!-- Dark Mode Toggle (Desktop) -->
+                    <button id="theme-toggle-desktop" type="button"
+                        class="text-church-purple dark:text-church-gold hover:bg-church-purple/10 dark:hover:bg-church-gold/10 rounded-full p-2.5 transition-colors focus:outline-none ring-2 ring-transparent focus:ring-church-gold">
+                        <svg id="theme-toggle-dark-icon-desktop" class="w-6 h-6 hidden" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon-desktop" class="w-6 h-6 hidden" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
                 </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-church-purple focus:outline-none">
+                <div class="md:hidden flex items-center gap-2">
+                    <!-- Dark Mode Toggle (Mobile) -->
+                    <button id="theme-toggle-mobile" type="button"
+                        class="text-church-purple dark:text-church-gold hover:bg-church-purple/10 dark:hover:bg-church-gold/10 rounded-full p-2 transition-colors focus:outline-none ring-2 ring-transparent focus:ring-church-gold">
+                        <svg id="theme-toggle-dark-icon-mobile" class="w-6 h-6 hidden" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="w-6 h-6 hidden" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button class="text-church-purple dark:text-church-gold focus:outline-none">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -117,15 +158,18 @@
     </header>
 
     <!-- Mass Schedule Section -->
-    <section id="mass-schedule" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="mass-schedule" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple mb-4">Mass Schedule</h2>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple dark:text-church-gold mb-4">Mass
+                    Schedule</h2>
                 <div class="w-24 h-1 bg-church-gold mx-auto"></div>
-                <p class="mt-4 text-lg text-slate-600">Join us for our weekly and Sunday services.</p>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Join us for our weekly and Sunday services.
+                </p>
             </div>
 
-            <div class="overflow-hidden bg-white shadow-xl rounded-2xl border border-church-purple/10">
+            <div
+                class="overflow-hidden bg-white dark:bg-slate-800 shadow-xl rounded-2xl border border-church-purple/10 dark:border-slate-700">
                 <table class="min-w-full text-center">
                     <thead class="bg-church-gold text-church-violet">
                         <tr>
@@ -136,19 +180,21 @@
                     </thead>
                     <tbody class="divide-y divide-church-purple/10">
                         <tr class="hover:bg-church-cream/50 transition-colors">
-                            <td class="py-4 px-6 font-medium text-church-purple">Sunday</td>
-                            <td class="py-4 px-6 text-slate-700">8:30 AM</td>
-                            <td class="py-4 px-6 text-slate-700">Sinhala</td>
+                            <td class="py-4 px-6 font-medium text-church-purple dark:text-church-gold">Sunday</td>
+                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">8:30 AM</td>
+                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">Sinhala</td>
                         </tr>
-                        <tr class="hover:bg-church-cream/50 transition-colors bg-church-cream/30">
-                            <td class="py-4 px-6 font-medium text-church-purple">Tuesday</td>
-                            <td class="py-4 px-6 text-slate-700">6:30 PM</td>
-                            <td class="py-4 px-6 text-slate-700">Sinhala</td>
+                        <tr
+                            class="hover:bg-church-cream/50 dark:hover:bg-slate-700/50 transition-colors bg-church-cream/30 dark:bg-slate-700/30">
+                            <td class="py-4 px-6 font-medium text-church-purple dark:text-church-gold">Tuesday</td>
+                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">6:30 PM</td>
+                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">Sinhala</td>
                         </tr>
-                        <tr class="hover:bg-church-cream/50 transition-colors">
-                            <td class="py-4 px-6 font-medium text-church-purple">Thursday (Novena)</td>
-                            <td class="py-4 px-6 text-slate-700">6:30 PM</td>
-                            <td class="py-4 px-6 text-slate-700">Sinhala</td>
+                        <tr class="hover:bg-church-cream/50 dark:hover:bg-slate-700/50 transition-colors">
+                            <td class="py-4 px-6 font-medium text-church-purple dark:text-church-gold">Thursday (Novena)
+                            </td>
+                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">6:30 PM</td>
+                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">Sinhala</td>
                         </tr>
                     </tbody>
                 </table>
@@ -157,18 +203,19 @@
     </section>
 
     <!-- About Our Parish Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-church-cream">
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-church-cream dark:bg-slate-900">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple mb-6">About Our Parish</h2>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple dark:text-church-gold mb-6">
+                        About Our Parish</h2>
                     <div class="w-20 h-1 bg-church-gold mb-6"></div>
-                    <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+                    <p class="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
                         Located in the heart of Moratuwa, St. Francis Xavier's Church has been a beacon of faith and
                         community for generations. Our heritage is deeply rooted in the coastal traditions of Angulana,
                         fostering a spirit of unity and devotion.
                     </p>
-                    <p class="text-lg text-slate-700 leading-relaxed">
+                    <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
                         We welcome everyone to be part of our vibrant family, celebrating our patron saint's legacy of
                         missionary zeal and love for God. Whether you are a long-time parishioner or a visitor, you will
                         find a home here.
@@ -191,12 +238,14 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple mb-4">Our Gallery</h2>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple dark:text-church-gold mb-4">Our
+                    Gallery</h2>
                 <div class="w-24 h-1 bg-church-gold mx-auto"></div>
-                <p class="mt-4 text-lg text-slate-600">Glimpses of our vibrant community and heritage.</p>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Glimpses of our vibrant community and
+                    heritage.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -249,11 +298,11 @@
     </section>
 
     <!-- Contact & Footer Section -->
-    <footer id="contact" class="bg-church-purple text-white relative">
+    <footer id="contact" class="bg-church-purple dark:bg-slate-950 text-white relative">
         <div class="absolute top-0 w-full overflow-hidden leading-none">
             <svg class="relative block w-full h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-church-cream"></path>
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-church-cream dark:fill-slate-900"></path>
             </svg>
         </div>
 
@@ -310,6 +359,56 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var themeToggleDarkIconDesktop = document.getElementById('theme-toggle-dark-icon-desktop');
+            var themeToggleLightIconDesktop = document.getElementById('theme-toggle-light-icon-desktop');
+            var themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+            var themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+
+            // Initial icon state
+            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                themeToggleLightIconDesktop.classList.remove('hidden');
+                themeToggleLightIconMobile.classList.remove('hidden');
+            } else {
+                themeToggleDarkIconDesktop.classList.remove('hidden');
+                themeToggleDarkIconMobile.classList.remove('hidden');
+            }
+
+            var themeToggleBtnDesktop = document.getElementById('theme-toggle-desktop');
+            var themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+
+            function toggleTheme() {
+                // Toggle icons inside the button that was clicked? No, toggle both sets to keep in sync.
+                themeToggleDarkIconDesktop.classList.toggle('hidden');
+                themeToggleLightIconDesktop.classList.toggle('hidden');
+                themeToggleDarkIconMobile.classList.toggle('hidden');
+                themeToggleLightIconMobile.classList.toggle('hidden');
+
+                // If is set in localstorage
+                if (localStorage.getItem('color-theme')) {
+                    if (localStorage.getItem('color-theme') === 'light') {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    }
+                } else {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
+                }
+            }
+
+            themeToggleBtnDesktop.addEventListener('click', toggleTheme);
+            themeToggleBtnMobile.addEventListener('click', toggleTheme);
+        });
+    </script>
 </body>
 
 </html>
