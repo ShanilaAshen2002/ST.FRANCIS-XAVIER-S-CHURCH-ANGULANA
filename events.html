@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Francis Xavier's Church, Angulana</title>
+    <title>Events - St. Francis Xavier's Church, Angulana</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <meta name="description"
-        content="Welcome to St. Francis Xavier's Church, Angulana, Moratuwa. Join our community for Mass, prayer, and events.">
+    <meta name="description" content="Upcoming events and gallery at St. Francis Xavier's Church, Angulana.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +46,8 @@
 
 </head>
 
-<body class="font-sans antialiased text-church-violet dark:text-gray-100 bg-church-cream dark:bg-slate-900">
+<body
+    class="font-sans antialiased text-church-violet dark:text-gray-100 bg-church-cream dark:bg-slate-900 flex flex-col min-h-screen">
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm"
@@ -55,7 +55,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="flex items-center gap-3 group">
+                    <a href="index.html" class="flex items-center gap-3 group">
                         <img src="logo.png" alt="St. Francis Xavier's Church Logo"
                             class="h-12 w-12 rounded-full object-cover border-2 border-church-gold/20 shadow-sm group-hover:scale-105 transition-transform duration-300">
                         <span
@@ -65,18 +65,18 @@
                     </a>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home"
+                    <a href="index.html#home"
                         class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Home</a>
-                    <a href="#mass-schedule"
+                    <a href="index.html#mass-schedule"
                         class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Mass
                         Schedule</a>
-                    <a href="#about"
+                    <a href="index.html#about"
                         class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">About</a>
                     <a href="events.html"
-                        class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Events</a>
-                    <a href="#gallery"
+                        class="text-church-purple dark:text-church-gold font-bold border-b-2 border-church-gold transition-colors">Events</a>
+                    <a href="index.html#gallery"
                         class="text-slate-600 dark:text-slate-300 hover:text-church-purple dark:hover:text-church-gold font-medium transition-colors">Gallery</a>
-                    <a href="#contact"
+                    <a href="index.html#contact"
                         class="px-5 py-2.5 bg-church-gold text-church-violet rounded-full font-bold hover:bg-yellow-400 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact
                         Us</a>
 
@@ -122,194 +122,156 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="new-church.jpg" alt="St. Francis Xavier's Church (New)" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-church-purple/50 mix-blend-multiply"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-church-purple/80 via-transparent to-transparent"></div>
-        </div>
-
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1
-                class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg animate-fade-in-up">
-                St. Francis Xavier's Church
-            </h1>
-            <p
-                class="text-2xl md:text-3xl text-church-gold mb-4 font-medium tracking-wide animate-fade-in-up delay-100">
-                Angulana
-            </p>
-            <div class="text-lg md:text-xl text-white/90 mb-10 space-y-1 font-light animate-fade-in-up delay-150">
-                <p>Belonging to the Lunawa Angulana Parish</p>
-                <p>Moratuwa Deanery</p>
-                <p>Archdiocese of Colombo</p>
-            </div>
-            <div class="flex justify-center animate-fade-in-up delay-200">
-                <a href="#mass-schedule"
-                    class="px-10 py-4 bg-church-gold text-church-violet font-bold text-lg rounded-full shadow-lg hover:bg-yellow-400 transition-all transform hover:scale-105 border-2 border-church-gold">
-                    Mass Times
-                </a>
-            </div>
-        </div>
-
-        <!-- Scroll Down Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#mass-schedule" class="text-white/80 hover:text-white">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
-            </a>
+    <!-- Header Section -->
+    <header class="relative pt-32 pb-12 bg-church-purple dark:bg-slate-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Church Events</h1>
+            <div class="w-24 h-1 bg-church-gold mx-auto mb-6"></div>
+            <p class="text-lg text-church-gold/90 max-w-2xl mx-auto">Stay updated with our upcoming feasts, community
+                gatherings, and special services.</p>
         </div>
     </header>
 
-    <!-- Mass Schedule Section -->
-    <section id="mass-schedule" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple dark:text-church-gold mb-4">Mass
-                    Schedule</h2>
-                <div class="w-24 h-1 bg-church-gold mx-auto"></div>
-                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Join us for our weekly and Sunday services.
-                </p>
-            </div>
+    <!-- Events Content -->
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto">
 
-            <div
-                class="overflow-hidden bg-white dark:bg-slate-800 shadow-xl rounded-2xl border border-church-purple/10 dark:border-slate-700">
-                <table class="min-w-full text-center">
-                    <thead class="bg-church-gold text-church-violet">
-                        <tr>
-                            <th scope="col" class="py-4 px-6 text-lg font-bold uppercase tracking-wider">Day</th>
-                            <th scope="col" class="py-4 px-6 text-lg font-bold uppercase tracking-wider">Time</th>
-                            <th scope="col" class="py-4 px-6 text-lg font-bold uppercase tracking-wider">Language</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-church-purple/10">
-                        <tr class="hover:bg-church-cream/50 transition-colors">
-                            <td class="py-4 px-6 font-medium text-church-purple dark:text-church-gold">Sunday</td>
-                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">8:30 AM</td>
-                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">Sinhala</td>
-                        </tr>
-                        <tr
-                            class="hover:bg-church-cream/50 dark:hover:bg-slate-700/50 transition-colors bg-church-cream/30 dark:bg-slate-700/30">
-                            <td class="py-4 px-6 font-medium text-church-purple dark:text-church-gold">Tuesday</td>
-                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">6:30 PM</td>
-                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">Sinhala</td>
-                        </tr>
-                        <tr class="hover:bg-church-cream/50 dark:hover:bg-slate-700/50 transition-colors">
-                            <td class="py-4 px-6 font-medium text-church-purple dark:text-church-gold">Thursday (Novena)
-                            </td>
-                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">6:30 PM</td>
-                            <td class="py-4 px-6 text-slate-700 dark:text-slate-300">Sinhala</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+            <!-- Upcoming Events Section -->
+            <section class="mb-20">
+                <h2
+                    class="text-3xl font-serif font-bold text-church-purple dark:text-church-gold mb-8 pl-4 border-l-4 border-church-gold">
+                    Upcoming Events</h2>
 
-    <!-- About Our Parish Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-church-cream dark:bg-slate-900">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple dark:text-church-gold mb-6">
-                        About Our Parish</h2>
-                    <div class="w-20 h-1 bg-church-gold mb-6"></div>
-                    <p class="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
-                        Located in the heart of Moratuwa, St. Francis Xavier's Church has been a beacon of faith and
-                        community for generations. Our heritage is deeply rooted in the coastal traditions of Angulana,
-                        fostering a spirit of unity and devotion.
-                    </p>
-                    <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        We welcome everyone to be part of our vibrant family, celebrating our patron saint's legacy of
-                        missionary zeal and love for God. Whether you are a long-time parishioner or a visitor, you will
-                        find a home here.
-                    </p>
-                </div>
-                <div class="order-1 md:order-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Event Card 1 (Placeholder) -->
                     <div
-                        class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                        <img src="old-church.jpg" alt="Old St. Francis Xavier's Church (Pre-2021)"
-                            class="w-full h-full object-cover">
-                        <div
-                            class="absolute inset-0 bg-church-purple/20 hover:bg-opacity-0 transition-all duration-500">
+                        class="bg-church-cream dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg border border-church-purple/10 dark:border-slate-700 flex flex-col md:flex-row hover:shadow-2xl transition-shadow duration-300">
+                        <div class="md:w-1/3 h-48 md:h-auto overflow-hidden relative group">
+                            <!-- Using old-church.jpg as placeholder for now, user will replace -->
+                            <img src="old-church.jpg" alt="Event Image"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute top-0 right-0 bg-church-gold text-church-violet font-bold px-3 py-1 m-2 rounded text-sm">
+                                MAR 19</div>
+                        </div>
+                        <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-church-purple dark:text-church-gold mb-2">Feast of St.
+                                    Joseph</h3>
+                                <p class="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">Join us for the feast
+                                    mass of St. Joseph, honoring the patron saint of the universal church. A special
+                                    blessing for fathers will follow the service.</p>
+                            </div>
+                            <div class="flex items-center text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>8:30 AM - 10:30 AM</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="mt-4 text-center text-sm text-slate-500 italic">The historic church building (Rebuilt in
-                        2021)</p>
+
+                    <!-- Event Card 2 (Placeholder) -->
+                    <div
+                        class="bg-church-cream dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg border border-church-purple/10 dark:border-slate-700 flex flex-col md:flex-row hover:shadow-2xl transition-shadow duration-300">
+                        <div class="md:w-1/3 h-48 md:h-auto overflow-hidden relative group">
+                            <!-- Using church-festival.jpg as placeholder for now -->
+                            <img src="church-festival.jpg" alt="Event Image"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute top-0 right-0 bg-church-gold text-church-violet font-bold px-3 py-1 m-2 rounded text-sm">
+                                APR 09</div>
+                        </div>
+                        <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-church-purple dark:text-church-gold mb-2">Easter
+                                    Sunday Service</h3>
+                                <p class="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">Celebrating the
+                                    resurrection of our Lord. High Mass will be sung in both Sinhala and English.</p>
+                            </div>
+                            <div class="flex items-center text-sm text-slate-500 dark:text-slate-400 mt-2">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>8:30 AM</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Past Events Gallery -->
+            <section>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-serif font-bold text-church-purple dark:text-church-gold mb-4">Event
+                        Gallery</h2>
+                    <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">Highlights from our recent community
+                        gatherings and celebrations.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Photo Grid Item 1 -->
+                    <div class="relative group overflow-hidden rounded-xl shadow-md aspect-square">
+                        <img src="church-festival.jpg" alt="Event photo"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span
+                                class="text-white font-serif font-bold text-lg border-2 border-church-gold px-4 py-2">View
+                                Album</span>
+                        </div>
+                    </div>
+                    <!-- Photo Grid Item 2 -->
+                    <div class="relative group overflow-hidden rounded-xl shadow-md aspect-square">
+                        <img src="new-church.jpg" alt="Event photo"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span
+                                class="text-white font-serif font-bold text-lg border-2 border-church-gold px-4 py-2">View
+                                Album</span>
+                        </div>
+                    </div>
+                    <!-- Photo Grid Item 3 -->
+                    <div class="relative group overflow-hidden rounded-xl shadow-md aspect-square">
+                        <img src="old-church.jpg" alt="Event photo"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span
+                                class="text-white font-serif font-bold text-lg border-2 border-church-gold px-4 py-2">View
+                                Album</span>
+                        </div>
+                    </div>
+                    <!-- Photo Grid Item 4 placeholder with color -->
+                    <div
+                        class="bg-gray-200 dark:bg-slate-700 relative group overflow-hidden rounded-xl shadow-md aspect-square flex items-center justify-center">
+                        <span class="text-slate-400 dark:text-slate-500 font-medium">Coming Soon</span>
+                    </div>
+                    <!-- Photo Grid Item 5 placeholder -->
+                    <div
+                        class="bg-gray-200 dark:bg-slate-700 relative group overflow-hidden rounded-xl shadow-md aspect-square flex items-center justify-center">
+                        <span class="text-slate-400 dark:text-slate-500 font-medium">Coming Soon</span>
+                    </div>
+                    <!-- Photo Grid Item 6 placeholder -->
+                    <div
+                        class="bg-gray-200 dark:bg-slate-700 relative group overflow-hidden rounded-xl shadow-md aspect-square flex items-center justify-center">
+                        <span class="text-slate-400 dark:text-slate-500 font-medium">Coming Soon</span>
+                    </div>
+                </div>
+            </section>
+
         </div>
-    </section>
+    </main>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-church-purple dark:text-church-gold mb-4">Our
-                    Gallery</h2>
-                <div class="w-24 h-1 bg-church-gold mx-auto"></div>
-                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">Glimpses of our vibrant community and
-                    heritage.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Gallery Item 1: New Church Festival -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3] cursor-pointer">
-                    <img src="church-festival.jpg" alt="Church Festival Celebrations"
-                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-church-purple/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <h3
-                            class="text-church-gold font-bold text-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            Feast Celebrations</h3>
-                        <p
-                            class="text-white text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                            Celebrations at the new church building.</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 2: New Church Night View -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3] cursor-pointer">
-                    <img src="new-church.jpg" alt="Night View"
-                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-church-purple/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <h3
-                            class="text-church-gold font-bold text-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            Night Illumination</h3>
-                        <p
-                            class="text-white text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                            The church lit up in glory.</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 3: Old Church -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3] cursor-pointer">
-                    <img src="old-church.jpg" alt="Historic Church"
-                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-t from-church-purple/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                        <h3
-                            class="text-church-gold font-bold text-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            Our Heritage</h3>
-                        <p
-                            class="text-white text-sm mt-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
-                            The historic church building (Pre-2021).</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Footer Section -->
-    <footer id="contact" class="bg-church-purple dark:bg-slate-950 text-white relative">
+    <!-- Footer -->
+    <footer id="contact" class="bg-church-purple dark:bg-slate-950 text-white relative mt-auto">
         <div class="absolute top-0 w-full overflow-hidden leading-none">
             <svg class="relative block w-full h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-church-cream dark:fill-slate-900"></path>
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="fill-white dark:fill-slate-900"></path>
             </svg>
         </div>
 
@@ -337,14 +299,6 @@
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             <span class="text-slate-200">+94 11 260 5412</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="h-6 w-6 text-church-gold mr-3" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                            </svg>
-                            <span class="text-slate-200">Fr. Indra Rathnasiri - +94 77 636 4082</span>
                         </li>
                     </ul>
                 </div>
@@ -394,13 +348,11 @@
             var themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
 
             function toggleTheme() {
-                // Toggle icons inside the button that was clicked? No, toggle both sets to keep in sync.
                 themeToggleDarkIconDesktop.classList.toggle('hidden');
                 themeToggleLightIconDesktop.classList.toggle('hidden');
                 themeToggleDarkIconMobile.classList.toggle('hidden');
                 themeToggleLightIconMobile.classList.toggle('hidden');
 
-                // If is set in localstorage
                 if (localStorage.getItem('color-theme')) {
                     if (localStorage.getItem('color-theme') === 'light') {
                         document.documentElement.classList.add('dark');
