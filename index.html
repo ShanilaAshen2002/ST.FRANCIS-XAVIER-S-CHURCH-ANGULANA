@@ -111,13 +111,35 @@
                                 fill-rule="evenodd" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <button class="text-church-purple dark:text-church-gold focus:outline-none">
+                    <button id="mobile-menu-button"
+                        class="text-church-purple dark:text-church-gold focus:outline-none p-2 rounded-md hover:bg-church-purple/10 dark:hover:bg-church-gold/10 transition-colors">
                         <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 absolute w-full left-0 top-20 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Home</a>
+                <a href="#mass-schedule"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Mass
+                    Schedule</a>
+                <a href="#about"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">About</a>
+                <a href="events.html"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Events</a>
+                <a href="#gallery"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Gallery</a>
+                <a href="#contact"
+                    class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-bold bg-church-gold text-church-violet hover:bg-yellow-400 shadow-md transition-all">Contact
+                    Us</a>
             </div>
         </div>
     </nav>
@@ -422,6 +444,16 @@
 
             themeToggleBtnDesktop.addEventListener('click', toggleTheme);
             themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+            // Mobile menu toggle
+            var mobileMenuButton = document.getElementById('mobile-menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
         });
     </script>
 </body>
