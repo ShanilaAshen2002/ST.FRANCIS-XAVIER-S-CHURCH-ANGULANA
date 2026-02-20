@@ -713,6 +713,57 @@
         </div>
     </main>
 
+    <!-- Contact Form Section -->
+    <section
+        class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
+        <div
+            class="max-w-lg mx-auto bg-white dark:bg-slate-800 p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h2 class="text-3xl sm:text-4xl font-sans font-bold text-[#1E3A5F] dark:text-white mb-8">Contact us</h2>
+
+            <form action="https://formsubmit.co/shanilasilva@gmail.com" method="POST" class="space-y-5">
+                <!-- Disable Captcha optionally (uncomment if you want to skip captcha) -->
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+                <!-- Name Input -->
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input type="text" name="name" required placeholder="Name"
+                        class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
+                </div>
+
+                <!-- Email Input -->
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                    </div>
+                    <input type="email" name="email" required placeholder="Email"
+                        class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
+                </div>
+
+                <!-- Message Input -->
+                <div class="relative">
+                    <textarea name="message" required placeholder="Message" rows="4"
+                        class="w-full px-6 py-4 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-3xl text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full py-4 bg-[#00BCD4] hover:bg-[#00A5BB] text-white font-bold text-lg rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 mt-2">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact" class="bg-church-purple dark:bg-slate-950 text-white relative mt-auto">
         <div class="absolute top-0 w-full overflow-hidden leading-none">
