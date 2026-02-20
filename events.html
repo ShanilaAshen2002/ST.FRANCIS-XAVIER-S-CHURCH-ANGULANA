@@ -54,12 +54,12 @@
         id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-3 group">
+                <div class="flex items-center min-w-0">
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
                         <img src="logo.png" alt="St. Francis Xavier's Church Logo"
-                            class="h-12 w-12 rounded-full object-cover border-2 border-church-gold/20 shadow-sm group-hover:scale-105 transition-transform duration-300">
+                            class="flex-shrink-0 h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border-2 border-church-gold/20 shadow-sm group-hover:scale-105 transition-transform duration-300">
                         <span
-                            class="font-serif text-xl sm:text-2xl font-bold text-church-purple tracking-tight group-hover:text-church-gold transition-colors duration-300">
+                            class="font-serif text-base sm:text-lg md:text-2xl font-bold text-church-purple tracking-tight group-hover:text-church-gold transition-colors duration-300 truncate">
                             St. Francis Xavier's Church
                         </span>
                     </a>
@@ -96,7 +96,7 @@
                     </button>
                 </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-2">
+                <div class="md:hidden flex items-center gap-1 sm:gap-2 flex-shrink-0">
                     <!-- Dark Mode Toggle (Mobile) -->
                     <button id="theme-toggle-mobile" type="button"
                         class="text-church-purple dark:text-church-gold hover:bg-church-purple/10 dark:hover:bg-church-gold/10 rounded-full p-2 transition-colors focus:outline-none ring-2 ring-transparent focus:ring-church-gold">
@@ -241,6 +241,17 @@
                         class="group relative overflow-hidden rounded-2xl shadow-lg aspect-square cursor-pointer bg-black">
                         <video src="Events/lentVideo/lent.mp4" controls class="w-full h-full object-cover"></video>
                         <div
+                            class="absolute inset-0 bg-church-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span
+                                class="bg-white/95 text-church-purple font-bold px-5 py-2.5 rounded-full shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm border border-white/50">
+                                <svg class="w-5 h-5 text-[#00BCD4]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                                </svg>
+                                Watch Video
+                            </span>
+                        </div>
+                        <div
                             class="absolute inset-0 bg-gradient-to-t from-church-purple/90 via-transparent to-transparent flex items-end p-6 pointer-events-none">
                             <div>
                                 <h3 class="text-xl font-bold text-white group-hover:text-church-gold transition-colors">
@@ -251,28 +262,53 @@
                     </div>
 
                     <!-- Album 1: Ash Wednesday -->
-                    <a href="ash-wednesday.html"
+                    <a href="ash-wednesday-2026.html"
                         class="group relative overflow-hidden rounded-2xl shadow-lg aspect-square cursor-pointer block">
                         <img src="Events/Ash%20Wednesday/ash-wednesday.jpg" alt="Ash Wednesday"
                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
                         <div
+                            class="absolute inset-0 bg-church-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span
+                                class="bg-white/95 text-church-purple font-bold px-5 py-2.5 rounded-full shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm border border-white/50">
+                                <svg class="w-5 h-5 text-[#00BCD4]" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                View Album
+                            </span>
+                        </div>
+                        <div
                             class="absolute inset-0 bg-gradient-to-t from-church-purple/90 via-transparent to-transparent flex items-end p-6">
                             <div>
                                 <h3 class="text-xl font-bold text-white group-hover:text-church-gold transition-colors">
-                                    Ash
-                                    Wednesday 2026</h3>
+                                    Ash Wednesday 2026</h3>
                                 <p class="text-slate-200 text-sm mt-1">New Album</p>
                             </div>
                         </div>
                     </a>
-
-
 
                     <!-- Album 3: Feast Celebrations -->
                     <a href="church-feast-2025.html"
                         class="group relative overflow-hidden rounded-2xl shadow-lg aspect-square cursor-pointer block">
                         <img src="church-festival.jpg" alt="Feast Album"
                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+                        <div
+                            class="absolute inset-0 bg-church-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span
+                                class="bg-white/95 text-church-purple font-bold px-5 py-2.5 rounded-full shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm border border-white/50">
+                                <svg class="w-5 h-5 text-[#00BCD4]" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                View Album
+                            </span>
+                        </div>
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-church-purple/90 via-transparent to-transparent flex items-end p-6">
                             <div>
@@ -291,51 +327,55 @@
 
     <!-- Contact Form Section -->
     <section
-        class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
+        class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
         <div
-            class="max-w-lg mx-auto bg-white dark:bg-slate-800 p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-sans font-bold text-[#1E3A5F] dark:text-white mb-8">Contact us</h2>
+            class="max-w-3xl mx-auto bg-white dark:bg-slate-800 p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h2 class="text-3xl font-sans font-bold text-[#1E3A5F] dark:text-white mb-6 text-center">Contact us</h2>
 
-            <form action="https://formsubmit.co/shanilasilva@gmail.com" method="POST" class="space-y-5">
+            <form action="https://formsubmit.co/shanilasilva@gmail.com" method="POST" class="space-y-4">
                 <!-- Disable Captcha optionally (uncomment if you want to skip captcha) -->
                 <!-- <input type="hidden" name="_captcha" value="false"> -->
                 <input type="hidden" name="_subject" value="New Contact Form Submission">
 
-                <!-- Name Input -->
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                        <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                clip-rule="evenodd" />
-                        </svg>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Name Input -->
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <input type="text" name="name" required placeholder="Name"
+                            class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
                     </div>
-                    <input type="text" name="name" required placeholder="Name"
-                        class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
-                </div>
 
-                <!-- Email Input -->
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                        <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
+                    <!-- Email Input -->
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                        </div>
+                        <input type="email" name="email" required placeholder="Email"
+                            class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
                     </div>
-                    <input type="email" name="email" required placeholder="Email"
-                        class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
                 </div>
 
                 <!-- Message Input -->
                 <div class="relative">
-                    <textarea name="message" required placeholder="Message" rows="4"
+                    <textarea name="message" required placeholder="Message" rows="3"
                         class="w-full px-6 py-4 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-3xl text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all resize-none"></textarea>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit"
-                    class="w-full py-4 bg-[#00BCD4] hover:bg-[#00A5BB] text-white font-bold text-lg rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 mt-2">
-                    Send Message
-                </button>
+                <div class="flex justify-center pt-2">
+                    <button type="submit"
+                        class="w-full md:w-auto md:min-w-[200px] px-8 py-3.5 bg-[#00BCD4] hover:bg-[#00A5BB] text-white font-bold text-lg rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 mt-2">
+                        Send Message
+                    </button>
+                </div>
             </form>
         </div>
     </section>

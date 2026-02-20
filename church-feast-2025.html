@@ -52,12 +52,12 @@
         id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="flex items-center gap-3 group">
+                <div class="flex items-center min-w-0">
+                    <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
                         <img src="logo.png" alt="St. Francis Xavier's Church Logo"
-                            class="h-12 w-12 rounded-full object-cover border-2 border-church-gold/20 shadow-sm group-hover:scale-105 transition-transform duration-300">
+                            class="flex-shrink-0 h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border-2 border-church-gold/20 shadow-sm group-hover:scale-105 transition-transform duration-300">
                         <span
-                            class="font-serif text-xl sm:text-2xl font-bold text-church-purple tracking-tight group-hover:text-church-gold transition-colors duration-300">
+                            class="font-serif text-base sm:text-lg md:text-2xl font-bold text-church-purple tracking-tight group-hover:text-church-gold transition-colors duration-300 truncate">
                             St. Francis Xavier's Church
                         </span>
                     </a>
@@ -92,51 +92,52 @@
                                 fill-rule="evenodd" clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <!-- ... Mobile Menu Button ... -->
-                    <div class="md:hidden flex items-center gap-2">
-                        <button id="theme-toggle-mobile" type="button"
-                            class="text-church-purple dark:text-church-gold hover:bg-church-purple/10 dark:hover:bg-church-gold/10 rounded-full p-2 transition-colors focus:outline-none ring-2 ring-transparent focus:ring-church-gold">
-                            <svg id="theme-toggle-dark-icon-mobile" class="w-6 h-6 hidden" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                            </svg>
-                            <svg id="theme-toggle-light-icon-mobile" class="w-6 h-6 hidden" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                                    fill-rule="evenodd" clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <button id="mobile-menu-button"
-                            class="text-church-purple dark:text-church-gold focus:outline-none p-2 rounded-md hover:bg-church-purple/10 dark:hover:bg-church-gold/10 transition-colors">
-                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </button>
-                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center gap-1 sm:gap-2 flex-shrink-0">
+                    <button id="theme-toggle-mobile" type="button"
+                        class="text-church-purple dark:text-church-gold hover:bg-church-purple/10 dark:hover:bg-church-gold/10 rounded-full p-2 transition-colors focus:outline-none ring-2 ring-transparent focus:ring-church-gold">
+                        <svg id="theme-toggle-dark-icon-mobile" class="w-6 h-6 hidden" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon-mobile" class="w-6 h-6 hidden" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-button"
+                        class="text-church-purple dark:text-church-gold focus:outline-none p-2 rounded-md hover:bg-church-purple/10 dark:hover:bg-church-gold/10 transition-colors">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <!-- Mobile Menu (omitted for brevity, same as other pages) -->
-            <div id="mobile-menu"
-                class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 absolute w-full left-0 top-20 shadow-lg">
-                <div class="px-4 pt-2 pb-6 space-y-2">
-                    <a href="index.html#home"
-                        class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Home</a>
-                    <a href="index.html#mass-schedule"
-                        class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Mass
-                        Schedule</a>
-                    <a href="index.html#about"
-                        class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">About</a>
-                    <a href="events.html"
-                        class="block px-3 py-3 rounded-lg text-base font-bold text-church-purple dark:text-church-gold bg-church-purple/5 dark:bg-slate-800 transition-all">Events</a>
-                    <a href="index.html#gallery"
-                        class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Gallery</a>
-                    <a href="index.html#contact"
-                        class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-bold bg-church-gold text-church-violet hover:bg-yellow-400 shadow-md transition-all">Contact
-                        Us</a>
-                </div>
+        </div>
+        <!-- Mobile Menu (omitted for brevity, same as other pages) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-gray-100 dark:border-gray-800 absolute w-full left-0 top-20 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html#home"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Home</a>
+                <a href="index.html#mass-schedule"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Mass
+                    Schedule</a>
+                <a href="index.html#about"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">About</a>
+                <a href="events.html"
+                    class="block px-3 py-3 rounded-lg text-base font-bold text-church-purple dark:text-church-gold bg-church-purple/5 dark:bg-slate-800 transition-all">Events</a>
+                <a href="index.html#gallery"
+                    class="block px-3 py-3 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-church-purple dark:hover:text-church-gold hover:bg-church-purple/5 dark:hover:bg-slate-800 transition-all">Gallery</a>
+                <a href="index.html#contact"
+                    class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-bold bg-church-gold text-church-violet hover:bg-yellow-400 shadow-md transition-all">Contact
+                    Us</a>
             </div>
+        </div>
     </nav>
 
     <!-- Header Section -->
@@ -715,51 +716,55 @@
 
     <!-- Contact Form Section -->
     <section
-        class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
+        class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
         <div
-            class="max-w-lg mx-auto bg-white dark:bg-slate-800 p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
-            <h2 class="text-3xl sm:text-4xl font-sans font-bold text-[#1E3A5F] dark:text-white mb-8">Contact us</h2>
+            class="max-w-3xl mx-auto bg-white dark:bg-slate-800 p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+            <h2 class="text-3xl font-sans font-bold text-[#1E3A5F] dark:text-white mb-6 text-center">Contact us</h2>
 
-            <form action="https://formsubmit.co/shanilasilva@gmail.com" method="POST" class="space-y-5">
+            <form action="https://formsubmit.co/shanilasilva@gmail.com" method="POST" class="space-y-4">
                 <!-- Disable Captcha optionally (uncomment if you want to skip captcha) -->
                 <!-- <input type="hidden" name="_captcha" value="false"> -->
                 <input type="hidden" name="_subject" value="New Contact Form Submission">
 
-                <!-- Name Input -->
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                        <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                clip-rule="evenodd" />
-                        </svg>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Name Input -->
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <input type="text" name="name" required placeholder="Name"
+                            class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
                     </div>
-                    <input type="text" name="name" required placeholder="Name"
-                        class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
-                </div>
 
-                <!-- Email Input -->
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                        <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
+                    <!-- Email Input -->
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-[#869AB8]" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                        </div>
+                        <input type="email" name="email" required placeholder="Email"
+                            class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
                     </div>
-                    <input type="email" name="email" required placeholder="Email"
-                        class="w-full pl-12 pr-4 py-3.5 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-full text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all">
                 </div>
 
                 <!-- Message Input -->
                 <div class="relative">
-                    <textarea name="message" required placeholder="Message" rows="4"
+                    <textarea name="message" required placeholder="Message" rows="3"
                         class="w-full px-6 py-4 bg-[#F0F7FB] dark:bg-slate-700 border-none rounded-3xl text-gray-700 dark:text-gray-200 placeholder-[#869AB8] focus:ring-2 focus:ring-[#00BCD4] focus:outline-none transition-all resize-none"></textarea>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit"
-                    class="w-full py-4 bg-[#00BCD4] hover:bg-[#00A5BB] text-white font-bold text-lg rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 mt-2">
-                    Send Message
-                </button>
+                <div class="flex justify-center pt-2">
+                    <button type="submit"
+                        class="w-full md:w-auto md:min-w-[200px] px-8 py-3.5 bg-[#00BCD4] hover:bg-[#00A5BB] text-white font-bold text-lg rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 mt-2">
+                        Send Message
+                    </button>
+                </div>
             </form>
         </div>
     </section>
